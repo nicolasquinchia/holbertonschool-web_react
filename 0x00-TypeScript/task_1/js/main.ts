@@ -1,4 +1,7 @@
-//------------------Task1----------------
+/**
+ * Task 1
+ */
+console.log("Output Task 1");
 
 interface Teacher {
     readonly firstName: string;
@@ -19,7 +22,10 @@ const teacher3: Teacher = {
 
 console.log(teacher3);
 
-//------------------Task2----------------
+/**
+ * Task 2
+ */
+console.log("Output Task 2");
 
 interface Directors extends Teacher {
     numberOfReports: number;
@@ -35,7 +41,10 @@ const director1: Directors = {
 
 console.log(director1);
 
-//------------------Task3----------------
+/**
+ * Task 3
+ */
+console.log("Output Task 3");
 
 interface printTeacherFunction {
     (firstName: string, lastName:string): String;
@@ -47,7 +56,10 @@ const printTeacher: printTeacherFunction = function(firstName: string, lastName:
 
 console.log(printTeacher(director1.firstName, director1.lastName));
 
-//------------------Task4----------------
+/**
+ * Task 4
+ */
+console.log("Output Task 4");
 
 interface StudentClassInterface {
     firstName: string;

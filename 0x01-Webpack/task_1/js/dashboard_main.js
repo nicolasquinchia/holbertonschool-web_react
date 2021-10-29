@@ -1,5 +1,6 @@
-import $ from 'jquery';
-import _ from 'lodash';
+import $ from "jquery";
+const _ = require('lodash');
+
 
 $('body').append('<p>Holberton Dashboard</p>');
 $('body').append('<p>Dashboard data for the students</p>');
@@ -7,13 +8,11 @@ $('body').append('<button>Click here to get started</button>');
 $('body').append('<p id="count"></p>');
 $('body').append('<p>Copyright - Holberton School</p>');
 
-const updateCounter = () => {
-  let times = $('#count').html() || 0;
-  $('button').on('click', () => {
-    times++;
-    $('#count').html(`${times} clicks on the button`);
-  });
-};
+let btncounter = 0;
 
-_.debounce(updateCounter, 500);
-updateCounter();
+function updateCounter() {
+    btncounter = btncounter + 1;
+	$('#count').text(`${btncounter} clicks on the button`);
+}
+
+$('button').on('click', _.debounce(updateCounter, 500));

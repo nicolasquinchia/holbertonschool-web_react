@@ -5,11 +5,12 @@ module.exports = {
         hot: true
     },
     entry: './src/index.js',
-	output: {
-		filename: 'bundle.js',
-		path: path.resolve(__dirname, 'dist')
-	},
+    output: {
+        filename: 'bundle.js',
+        path: path.resolve('./dist')
+    },
 	mode: 'production',
+    devtool:'inline-source-map',
 	module: {
 		rules: [
 			{
@@ -21,7 +22,11 @@ module.exports = {
 				use: [
 					'file-loader',
 					{
-						loader: 'image-webpack-loader'
+						loader: 'image-webpack-loader',
+                        options: {
+                            disable:true,
+                            bypassOnDebug: true
+                        }
 					},
 				],
 			},

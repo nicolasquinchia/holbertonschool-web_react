@@ -1,15 +1,11 @@
 const path = require('path');
 
 module.exports = {
-    devServer: {
-        hot: true
-    },
     entry: './src/index.js',
     output: {
         filename: 'bundle.js',
         path: path.resolve('./dist')
     },
-	mode: 'production',
     devtool:'inline-source-map',
 	module: {
 		rules: [
@@ -32,5 +28,9 @@ module.exports = {
 			},
 		],
 	},
+    devServer: {
+        hot: true,
+        compress: true
+    }
 }
 

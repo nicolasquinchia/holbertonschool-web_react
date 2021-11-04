@@ -1,12 +1,13 @@
 const path = require('path');
 
 module.exports = {
-    entry: './src/index.js',
-    output: {
-        filename: 'bundle.js',
-        path: path.resolve('./dist')
-    },
-    devtool:'inline-source-map',
+  entry: './src/index.js',
+  output: {
+    filename: 'bundle.js',
+    path: path.resolve('./dist'),
+  },
+
+	devtool: 'inline-source-map',
 	module: {
 		rules: [
 			{
@@ -19,18 +20,18 @@ module.exports = {
 					'file-loader',
 					{
 						loader: 'image-webpack-loader',
-                        options: {
-                            disable:true,
-                            bypassOnDebug: true
-                        }
+						options: {
+							disable: true,
+							bypassOnDebug: true
+						},
 					},
 				],
 			},
-		],
+		]
 	},
-    devServer: {
-        hot: true,
-        compress: true
-    }
-}
 
+  devServer: {
+		hot: true,
+		compress: true
+  },
+};

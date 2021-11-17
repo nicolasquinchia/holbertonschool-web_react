@@ -1,0 +1,10 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.Login {
+  height: 45vh;
+  padding: 80px;
+  border-top: 3px solid #e1354b;
+  border-bottom: 3px solid #e1354b;
+}

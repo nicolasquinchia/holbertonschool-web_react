@@ -29,7 +29,7 @@ class App extends React.Component {
     const { isLoggedIn } = this.props;
     return (
       <React.Fragment>
-        <Notificacions listNotifications = {listNotifications}/>
+        <Notifications listNotifications = {listNotifications}/>
         <div className="App">
           <Header />
         </div>

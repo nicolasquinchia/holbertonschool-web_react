@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 import PropTypes from 'prop-types';
-import Notificacions from '../Notifications/Notifications';
+import Notifications from '../Notifications/Notifications';
 import Header from '../Header/Header';
 import Login from '../Login/Login';
 import Footer from '../Footer/Footer';

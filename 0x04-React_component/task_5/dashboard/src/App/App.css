@@ -1,0 +1,11 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.App-body {
+  height: 60vh;
+}
+
+.App-footer {
+  height: 100%;
+}
